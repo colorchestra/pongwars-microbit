@@ -9,7 +9,6 @@ let player1_y = 3
 let player1_direction_x = true
 let player1_direction_y = true
 
-
 function winkekatze() {
     if (last_led_toggle + 1000 < control.millis()) {
         led.toggle(2, 0)
@@ -77,9 +76,6 @@ for (let x = 0; x <= scrollbit.cols(); x++) {
         }
     }
 }
-// init players
-//cols[player1_x][player1_y] = !cols[player1_x][player1_y]
-//cols[13][3] = !cols[13][3]
 
 
 
@@ -91,23 +87,4 @@ basic.forever(function on_forever() {
     render_grid()
     scrollbit.show()
     basic.pause(100)
-    /** 
-    for row in rows:
-        for col in cols:
-            if col:
-                scrollbit.set_pixel(col, row, 128)
-    scrollbit.show()
-
-    row = 0
-    while row < scrollbit.rows():
-        col = 0
-        while col < scrollbit.cols() / 2:
-            #scrollbit.clear()
-            scrollbit.setPixel(col, row, 128)
-            scrollbit.show()
-            col += 1
-        row += 1
-    
- */
 })
-control.millis()
